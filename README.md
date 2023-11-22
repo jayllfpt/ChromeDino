@@ -1,7 +1,8 @@
 # ChromeDino
 Reinforcement Learning AI plays ```chrome://dino game```
 
-Download Chrome
+Download Chrome<br>
+
 Goto: [game](chrome://dino)
 
 ![image](test_images/test1.png)
