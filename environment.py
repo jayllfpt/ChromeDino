@@ -27,6 +27,7 @@ class WebGame(Env):
             2: 'no_op'
         }
         if action !=2:
+        # if action == 0:
             pydirectinput.press(action_map[action])
 
         done, done_cap = self.get_done() 

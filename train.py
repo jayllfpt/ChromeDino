@@ -2,10 +2,7 @@ import os
 # Import Base Callback for saving models
 from stable_baselines3.common.callbacks import BaseCallback
 # Check Environment    
-from stable_baselines3.common import env_checker 
 from stable_baselines3 import DQN
-from stable_baselines3.common.monitor import Monitor
-from stable_baselines3.common.vec_env import DummyVecEnv, VecFrameStack
 from environment import *
 
 class TrainAndLoggingCallback(BaseCallback):
@@ -34,7 +31,6 @@ if __name__=="__main__":
     # env_checker.check_env(env)
     callback = TrainAndLoggingCallback(check_freq=1000, save_path=CHECKPOINT_DIR)
     model = DQN('CnnPolicy', env, tensorboard_log=LOG_DIR, verbose=1, buffer_size=1200000, learning_starts=1000, )
-
     model.learn(total_timesteps=100000, callback=callback)
 
 
