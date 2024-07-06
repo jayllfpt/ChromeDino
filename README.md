@@ -3,7 +3,7 @@ Reinforcement Learning AI plays ```chrome://dino``` game
 
 # Demo
 
-![demo-video](assets\demo.mp4)
+![demo-video](assets/demo.mp4)
 
 # Game:
 
