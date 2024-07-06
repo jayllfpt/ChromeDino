@@ -3,12 +3,12 @@ import time
 from stable_baselines3 import DQN
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv, VecFrameStack
-from environment import *
+from environment.ChromeDino import *
 import argparse
 
 # Argument parsing
 parser = argparse.ArgumentParser(description="Run a DQN model.")
-parser.add_argument('--model', type=str, default="models/2actions_100000.zip", help='Path to the model file.')
+parser.add_argument('--model', type=str, default="checkpoints/best_model_1500.zip", help='Path to the model file.')
 parser.add_argument('--runtimes', type=int, default=5, help='Number of runs to execute.')
 args = parser.parse_args()
 
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     CHECKPOINT_DIR = './train/'
     LOG_DIR = './logs/'
 
-    env = WebGame()
+    env = ChromeDino()
 
-    model = DQN('CnnPolicy', env, tensorboard_log=LOG_DIR, verbose=1, buffer_size=1200000, learning_starts=1000)
+    model = DQN('CnnPolicy', env, tensorboard_log=LOG_DIR, verbose=1, buffer_size=400000, learning_starts=100000)
 
     model.load(args.model)
 

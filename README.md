@@ -1,9 +1,16 @@
 # ChromeDino
 Reinforcement Learning AI plays ```chrome://dino``` game
 
-Download Chrome<br>
+# Demo
 
+![demo-video](assets\demo.mp4)
+
+# Game:
+
+Download Chrome<br>
 Goto: [chrome Dino game](chrome://dino)
+
+You can try [Chrome-Dino HTML Game](environment\Chrome-Dino.html)
 
 ![image](images/test1.png)
 
@@ -17,7 +24,7 @@ Remember to open the the game screen in your primary monitor. <br>Because the ga
 ```python train.py```<br>If you want to custom the trainning, checkout [train.py](./train.py)
 
 # Test model
-Feel free to run with default configs:
+Feel free to  run with default configs:
 ```python test.py```
 
 Or with custom configs:
